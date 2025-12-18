@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Federated Histopathology AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              background: "#000000",
+              foreground: "#ffffff",
+              zinc: {
+                850: "#1f1f22",
+                950: "#09090b",
+              }
+            },
+            fontFamily: {
+              sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+            },
+            animation: {
+              "accordion-down": "accordion-down 0.2s ease-out",
+              "accordion-up": "accordion-up 0.2s ease-out",
+              "spotlight": "spotlight 2s ease .75s 1 forwards",
+            },
+            keyframes: {
+              "accordion-down": {
+                from: { height: "0" },
+                to: { height: "var(--radix-accordion-content-height)" },
+              },
+              "accordion-up": {
+                from: { height: "var(--radix-accordion-content-height)" },
+                to: { height: "0" },
+              },
+              spotlight: {
+                "0%": { opacity: 0, transform: "translate(-72%, -62%) scale(0.5)" },
+                "100%": { opacity: 1, transform: "translate(-50%,-40%) scale(1)" },
+              },
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000000;
+        color: #ffffff;
+        -webkit-font-smoothing: antialiased;
+      }
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #27272a; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3f3f46; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.25",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.556.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.1",
+    "axios": "https://aistudiocdn.com/axios@^1.13.2",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "jszip": "https://aistudiocdn.com/jszip@^3.10.1"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>

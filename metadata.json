@@ -1,0 +1,5 @@
+{
+  "name": "Federated Histopathology AI",
+  "description": "Premium Apple-style frontend for Federated Learning Cancer Detection, featuring multi-model inference, Grad-CAM visualization, and batch processing.",
+  "requestFramePermissions": []
+}
